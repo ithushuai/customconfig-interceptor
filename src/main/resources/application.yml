@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: dev #选择使用的环境
+---
+spring:
+  profiles: dev #开发环境
+jdbc:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://127.0.0.1:3306/dev
+  username: root
+  password: root
+
+logging:
+  level:
+    com.hushuai: debug
+---
+spring:
+  profiles: prod #生产环境
+jdbc:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://127.0.0.1:3306/prod
+  username: root
+  password: root
+
+logging:
+  level:
+    com.hushuai: debug
+
